@@ -59,30 +59,30 @@ For a **non-encrypted version**, simply remove all encryption-related code.
 
 ### Configuration
 #### Server (`server_config.json`):
-```json
+```python
 {
-"internal_data_port": 5000,// PyFrp server data port
-"allowed_port_range": "5001-5500",// Allowed port range
-"max_ports_per_client": 5,// Max ports per client
-"key": "07A36AEF1907843"// Encryption key
+    "internal_data_port": 5000, // PyFrp server data port
+    "allowed_port_range": "5001-5500", // Allowed port range
+    "max_ports_per_client": 5, // Max ports per client
+    "key": "07A36AEF1907843" // Encryption key
 }
 ```
 
 #### Client (`client_config.json`):
-```json
+```python
 {
-"server_host": "127.0.0.1",// PyFrp server address
-"server_port": 5000,// PyFrp server port
-"key": "07A36AEF1907843",// Encryption key
-"mappings": [// Port mappings
-{
-"forward_host": "127.0.0.1", // Local host
-"forward_port": 5902,// Local port
-"target_port": 5500,// Target port
-"mode": "tcp"// Protocol (TCP)
-}
-// Add more mappings as needed
-]
+    "server_host": "127.0.0.1", // PyFrp server address
+    "server_port": 5000, // PyFrp server port
+    "key": "07A36AEF1907843", // Encryption key
+    "mappings": [ // Port mappings
+        {
+            "forward_host": "127.0.0.1", // Local host
+            "forward_port": 5902, // Local port
+            "target_port": 5500, // Target port
+            "mode": "tcp" // Protocol (TCP/UDP)
+        }
+        // Add more mappings as needed
+    ]
 }
 ```
 
@@ -95,9 +95,9 @@ python client.py client_config.json
 ---
 
 ## 📞 Contact Us
-📧 Email: wyt18222152539wyt@163.com
-🌐 Website: [Galaxy Vastar Software Studio](https://www.gvsds.com)
-📱 WeChat: GVSADS
+ - 📧 Email: wyt18222152539wyt@163.com
+ - 🌐 Website: [Galaxy Vastar Software Studio](https://www.gvsds.com)
+ - 📱 WeChat: GVSADS
 
 ---
 
@@ -142,7 +142,7 @@ pip install pycryptodome==3.22.0
 然后，你可以修改源代码中的个人配置
 
 server端配置修改：
-```json
+```python
 {
     "internal_data_port": 5000, // PyFrp 服务器端数据端口
     "allowed_port_range": "5001-5500", // 允许的端口范围
@@ -152,7 +152,7 @@ server端配置修改：
 ```
 
 client
-```json
+```python
 {
     "server_host": "127.0.0.1", // PyFrp 服务器端主机地址
     "server_port": 5000, // PyFrp 服务器端端口
@@ -176,6 +176,6 @@ python client.py client_config.json
 ```
 
 ## 📞 联系我们
-📧 Email: wyt18222152539wyt@163.com
-🌐 官网: [银河万通软件开发工作室](https://www.gvsds.com)
-📱 微信: GVSADS
+ - 📧 Email: wyt18222152539wyt@163.com
+ - 🌐 官网: [银河万通软件开发工作室](https://www.gvsds.com)
+ - 📱 微信: GVSADS
